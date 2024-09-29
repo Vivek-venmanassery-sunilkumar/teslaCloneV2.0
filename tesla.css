@@ -1,0 +1,68 @@
+
+body{
+    margin: 0;
+    font-size: 16px;
+}
+.main_container{
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+}
+#background1{
+    overflow: hidden;
+    height: 746px;
+}
+.rest_of_the_backgrounds{
+    overflow: hidden;
+}
+#bg1{
+    width: 95em;
+    margin-top: -4.5em;
+    height:56em;
+}
+header{
+    position: fixed;
+    top: 0;
+    height: 3.5em;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+#logo_wrapper{
+    width: 13.5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+#logo{
+    height: 1.5em;
+    width:7.5em;
+    fill: white;
+}
+#logo_wrapper a{
+    text-decoration: none;
+    height: 1.5em;
+}
+#padding_div_between_logo_wrapper-menu_bar{
+    width: 22em;
+}
+#menu_bar{
+    width: 25em;
+}
+
+#menu_bar ol{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;    
+    justify-content: space-between;
+    align-items: center;
+}
+#menu_bar li{
+    display: flex;
+    align-items: center;
+    height: 2em;
+}
