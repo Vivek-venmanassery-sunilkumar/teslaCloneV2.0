@@ -14,12 +14,19 @@ body{
 }
 .rest_of_the_backgrounds{
     overflow: hidden;
+    height: 748px;
 }
 #bg1{
     width: 95em;
     margin-top: -4.5em;
     height:56em;
 }
+.bg{
+    margin-top: -4.6em;
+    width: 95em;
+    height: 56em;
+}
+
 header{
     position: fixed;
     top: 0;
@@ -28,6 +35,35 @@ header{
     display: flex;
     flex-direction: row;
 }
+#title_firstpart{
+    position: relative;
+    width: 61em;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+#top_right_buttons{
+    position: absolute;
+    height: 3.5em;
+    width: 5.9em;
+    margin-right: -31.5em;
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    align-items: center;
+    gap: 0.2em;
+}
+#top_right_buttons button{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0.2em 0.2em;
+    margin: 0;
+    background-color: rgb(154, 154, 176);
+    border-radius: 4px;
+    border: none;
+}
+
 #logo_wrapper{
     width: 13.5em;
     display: flex;
@@ -45,10 +81,12 @@ header{
     height: 1.5em;
 }
 #padding_div_between_logo_wrapper-menu_bar{
-    width: 22em;
+    width: 21.5em;
+    height: 100%;
 }
 #menu_bar{
-    width: 25em;
+    height: 2em;
+    width: 25.9em;
 }
 
 #menu_bar ol{
@@ -58,11 +96,44 @@ header{
     padding: 0;
     display: flex;
     flex-direction: row;    
-    justify-content: space-between;
     align-items: center;
 }
 #menu_bar li{
-    display: flex;
-    align-items: center;
     height: 2em;
+    width: auto;
+    list-style-type: none;
+}
+#menu_bar li button{
+    height: 100%;
+    padding: 0 1.26em;
+    border-radius: 4px;
+    border: transparent;
+    cursor: pointer;
+    background-color: transparent;
+    transition-delay: 0.1s ease;
+}
+#menu_bar span{
+    font-size: 13.4px;
+    font-family: Arial, sans-serif;
+    font-weight: 600;
+    color: #fff;
+}
+#menu_bar button:hover{
+    background-color: #d0d1d2;
+   
+}
+#menu_bar button:hover span{
+    color: black;
+}
+#menu_bar:hover ~ #logo_wrapper #logo{
+    fill: black;
+}
+.top_small_elements{
+    height: 100%;
+    width: 100%;
+    fill: #fff;
+}
+#top_right_buttons a{
+    height: 1.7em;
+    width:1.7em;
 }
