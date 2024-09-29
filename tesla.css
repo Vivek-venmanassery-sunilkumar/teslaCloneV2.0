@@ -3,8 +3,8 @@ body{
     margin: 0;
     font-size: 16px;
 }
-.main_container{
-    width: 90vw;
+#main_container{
+    width: 98.9vw;
     display: flex;
     flex-direction: column;
 }
@@ -29,28 +29,22 @@ body{
 
 header{
     position: fixed;
+    background-color: transparent;
     top: 0;
-    height: 3.5em;
+    height: 0;
     width: 100%;
-    display: flex;
-    flex-direction: row;
+    z-index: 5;
 }
-#title_firstpart{
-    position: relative;
-    width: 61em;
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-}
+
 #top_right_buttons{
     position: absolute;
     height: 3.5em;
-    width: 5.9em;
-    margin-right: -31.5em;
+    width: 6.4em;
+    left: 86.5em;
     display: flex;
     flex-direction: row;
-    /* justify-content: space-between; */
     align-items: center;
+    justify-content: space-between;
     gap: 0.2em;
 }
 #top_right_buttons button{
@@ -59,12 +53,14 @@ header{
     align-items: center;
     padding: 0.2em 0.2em;
     margin: 0;
-    background-color: rgb(154, 154, 176);
+    background-color: transparent;
     border-radius: 4px;
     border: none;
 }
 
 #logo_wrapper{
+    position: absolute;
+    top: 1em;
     width: 13.5em;
     display: flex;
     flex-direction: row;
@@ -80,11 +76,11 @@ header{
     text-decoration: none;
     height: 1.5em;
 }
-#padding_div_between_logo_wrapper-menu_bar{
-    width: 21.5em;
-    height: 100%;
-}
+
 #menu_bar{
+    position: absolute;
+    top: 0.75em;
+    right: 34em;
     height: 2em;
     width: 25.9em;
 }
@@ -122,10 +118,23 @@ header{
     background-color: #d0d1d2;
    
 }
-#menu_bar button:hover span{
+/* top three right side options hovering effect */
+#button1:hover{
+    background-color: rgba(0, 0, 0, .05)
+}
+#button2:hover{
+    background-color: rgba(0, 0, 0, .05)
+}
+#button3:hover{
+    background-color: rgba(0, 0, 0, .05)
+}
+#menu_bar:hover button span{
     color: black;
 }
 #menu_bar:hover ~ #logo_wrapper #logo{
+    fill: black;
+}
+#menu_bar:hover ~ #top_right_buttons .top_small_elements{
     fill: black;
 }
 .top_small_elements{
@@ -136,4 +145,30 @@ header{
 #top_right_buttons a{
     height: 1.7em;
     width:1.7em;
+}
+header:has(#menu_bar:hover) ~ #main_container{
+    filter: blur(5px);
+}
+
+#ultimate_menu_div{
+    position: absolute;
+    top: -1em;
+    left: -35em;
+    height: 0;
+    width: 100vw;
+    background-color: #fff;
+    transition: opacity 0.2s ease;
+    z-index: -1;
+    opacity: 0;
+}
+
+#menu_pieces:has(#vehicles:hover)~#ultimate_menu_div, #ultimate_menu_div:hover{
+    height:33em;
+    transition: height 0.33s ease;
+    opacity: 1;
+}
+#menu_pieces:has(#energy:hover)~#ultimate_menu_div, #ultimate_menu_div:hover{
+    height: 25em;
+    transition: height 0.33s ease;
+    opacity: 1;
 }
