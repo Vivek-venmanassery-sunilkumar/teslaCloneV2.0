@@ -26,6 +26,11 @@ body{
     width: 95em;
     height: 56em;
 }
+#footer{
+    width: 100%;
+    height: 33.7em;
+    background-color: black;
+}
 
 header{
     position: fixed;
@@ -174,11 +179,13 @@ header:has(#menu_bar:hover) ~ #main_container{
     top: -1em;
     width: 100vw;
     background-color: transparent;
+    visibility: hidden;
 }
 
 
 #vehicles:hover+#vehicles_secondary, #vehicles_secondary:hover{
-    height: 35em;
+    height: 32em;
+    visibility: visible;
 }
 #energy:hover+#energy_secondary, #energy_secondary:hover{
     height: 25em;
@@ -213,4 +220,25 @@ header:has(#menu_bar:hover) ~ #main_container{
 #menu_pieces:has(#shop:hover,#shop_secondary:hover)~#ultimate_menu_div{
     max-height: 21em;
     opacity: 1;
+}
+
+#vehicles_secondary{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-grow: 0;
+}
+
+#sb_vehicles_left{
+    padding-top: 5em;
+    padding-bottom: 2em;
+    padding-left: 5em;
+    width: 10em;
+    height: 10em;
+    background-color: rgb(238, 224, 28);
+}
+#sb_vehicles_right{
+    flex-grow: 1;
+    background-color: green;
+    height: 10em;
 }
