@@ -100,6 +100,8 @@ header{
     list-style-type: none;
 }
 #menu_bar li button{
+    position: relative;
+    z-index: 10;
     height: 100%;
     padding: 0 1.26em;
     border-radius: 4px;
@@ -116,7 +118,7 @@ header{
 }
 #menu_bar button:hover{
     background-color: #d0d1d2;
-   
+    z-index: 10;
 }
 /* top three right side options hovering effect */
 #button1:hover{
@@ -150,25 +152,65 @@ header:has(#menu_bar:hover) ~ #main_container{
     filter: blur(5px);
 }
 
+/* navigation menu items hover effects */
+
 #ultimate_menu_div{
     position: absolute;
     top: -1em;
     left: -35em;
-    height: 0;
+    height: 40em;
+    max-height: 0;
     width: 100vw;
     background-color: #fff;
-    transition: opacity 0.2s ease;
+    transition: max-height 0.5s ease, opacity 0.33s ease;
     z-index: -1;
     opacity: 0;
 }
+#vehicles_secondary,#energy_secondary,#charging_secondary,#discover_secondary,#shop_secondary{
+    position: absolute;
+    max-height: 40em;
+    height: 0em;
+    left: -35em;
+    top: -1em;
+    width: 100vw;
+    background-color: transparent;
+}
 
-#menu_pieces:has(#vehicles:hover)~#ultimate_menu_div, #ultimate_menu_div:hover{
-    height:33em;
-    transition: height 0.33s ease;
+
+#vehicles:hover+#vehicles_secondary, #vehicles_secondary:hover{
+    height: 35em;
+}
+#energy:hover+#energy_secondary, #energy_secondary:hover{
+    height: 25em;
+}
+#charging:hover+#charging_secondary,#charging_secondary:hover{
+    height: 25em;
+}
+#discover:hover+#discover_secondary,#discover_secondary:hover{
+    height: 30em;
+}
+#shop:hover+#shop_secondary,#shop_secondary:hover{
+    height: 21em;
+}
+
+
+#menu_pieces:has(#vehicles:hover,#vehicles_secondary:hover)~#ultimate_menu_div{
+    max-height:32em;
     opacity: 1;
 }
-#menu_pieces:has(#energy:hover)~#ultimate_menu_div, #ultimate_menu_div:hover{
-    height: 25em;
-    transition: height 0.33s ease;
+#menu_pieces:has(#energy:hover,#energy_secondary:hover)~#ultimate_menu_div{
+    max-height: 25em;
+    opacity: 1;
+}
+#menu_pieces:has(#charging:hover,#charging_secondary:hover)~#ultimate_menu_div{
+    max-height: 25em;
+    opacity: 1;
+}
+#menu_pieces:has(#discover:hover,#discover_secondary:hover)~#ultimate_menu_div{
+    max-height: 30em;
+    opacity: 1;
+}
+#menu_pieces:has(#shop:hover,#shop_secondary:hover)~#ultimate_menu_div{
+    max-height: 21em;
     opacity: 1;
 }
