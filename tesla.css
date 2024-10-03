@@ -499,7 +499,7 @@ header:has(#menu_bar:hover) ~ #main_container{
     position: relative;
 }
 
-#sb_energy_right span:after{
+#sb_energy_right span::after{
     content: '';
     background-color: #5c5e62;
     border: none;
@@ -511,7 +511,7 @@ header:has(#menu_bar:hover) ~ #main_container{
     transform-origin: bottom;
     transition: all 0.2s ease;
 }
-#sb_energy_right a:hover span:after{
+#sb_energy_right a:hover span::after{
     height: 1px;
     box-shadow: 0 1px 1px black;
 }
@@ -549,7 +549,7 @@ header:has(#menu_bar:hover) ~ #main_container{
     border-left: solid rgb(128,128,128,0.5) 1.5px;
     opacity: 0;
     transition: opacity 0.5s ease;
-    padding-left: 3em;
+    padding-left: 1em;
     margin-top: -4em;
 }
 
@@ -620,3 +620,26 @@ header:has(#menu_bar:hover) ~ #main_container{
 
 /* charging menu right */
 
+#sb_charging_right a{
+    text-decoration: none;
+}
+.sb_charging_right_links{
+    color: #5c5e62 !important;
+    position: relative;
+}
+.sb_charging_right_links::after{
+    content: '';
+    background-color: #5c5e62;
+    border: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    transform-origin: bottom;
+    transition: all 0.2s ease;
+}
+#sb_charging_right a:hover .sb_charging_right_links::after{
+    height: 1px;
+    box-shadow: 0 1px 1px black;
+}
