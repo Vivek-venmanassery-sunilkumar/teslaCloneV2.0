@@ -11,6 +11,12 @@ body{
 #background1{
     overflow: hidden;
     height: 746px;
+    position: relative;
+}
+#first_background_page_elts{
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 .rest_of_the_backgrounds{
     overflow: hidden;
