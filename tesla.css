@@ -694,3 +694,25 @@ header:has(#menu_bar:hover) ~ #main_container{
     height:1px;
     box-shadow:0 1px 0.5px black;
 }
+
+/* shop submenu starting */
+#shop_secondary{
+    padding-left: 20em;
+    padding-top: 3em;
+    width: 53em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.shop_images{
+    height: 5.9em;
+    width: 9.8em;
+    scale: 1.3;
+}
+.shop_secondary_h3{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
