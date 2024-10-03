@@ -643,3 +643,54 @@ header:has(#menu_bar:hover) ~ #main_container{
     height: 1px;
     box-shadow: 0 1px 1px black;
 }
+
+/* dicover submenu starting */
+
+#discover_secondary{
+    display: flex;
+    flex-direction: row;
+    width: 40em;
+    padding-top: 7em;
+    padding-left: 25em;
+    justify-content: space-between;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+#discover_secondary h4{
+    color: #5c5e62;
+}
+.discover_secondary_elts{
+    display: flex;
+    flex-direction: column;
+    
+}
+.discover_secondary_elts ol{
+    padding: 0;
+    margin: 0;
+}
+.discover_secondary_elts a{
+    text-decoration: none;
+}
+.discover_secondary_elts span{
+    color: black !important;
+    position: relative;
+}
+#discover:hover ~ #discover_secondary,#discover_secondary:hover{
+    opacity: 1;
+}
+.discover_secondary_elts span::after{
+    content: '';
+    position: absolute;
+    background-color: black;
+    bottom: 0;
+    left: 0;
+    height: 0;
+    width: 100%;
+    transform-origin: bottom;
+    transition: all 0.33s ease;
+}
+.discover_secondary_elts a:hover span::after{
+    height:1px;
+    box-shadow:0 1px 0.5px black;
+}
