@@ -232,14 +232,13 @@ header:has(#menu_bar:hover) ~ #main_container{
 }
 
 #sb_vehicles_left{
-    padding-left: 10em;
-    padding-right: 4em;
-    width: 56em;
+    padding-left: 9em;
+    padding-right: 3.5em;
+    width: 55em;
     height: 23em;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    grid-gap: 1e
     opacity: 0;
     transition: opacity 0.5s ease;
     background-color: transparent;
@@ -247,16 +246,20 @@ header:has(#menu_bar:hover) ~ #main_container{
 #vehicles:hover ~ #vehicles_secondary #sb_vehicles_left,#vehicles:hover ~ #vehicles_secondary #sb_vehicles_right{
     opacity: 1;
 }
+#vehicles_secondary:hover #sb_vehicles_left, #vehicles_secondary:hover #sb_vehicles_right{
+    opacity:1;
+}
 #sb_vehicles_right{
     flex-grow: 1;
     background-color: transparent;
     height: 23em;
     border-left: solid rgb(128,128,128,0.5) 1.5px;
     opacity: 0;
+    transition: opacity 0.5s ease;
 }
 .cars{
-    height: 6em;
-    width: 10em;
+    height: 5.9em;
+    width: 9.8em;
     scale: 1.3;
 }
 .vehicles_grid_elts{
@@ -264,3 +267,54 @@ header:has(#menu_bar:hover) ~ #main_container{
     flex-direction: column;
     align-items: center;
 }
+.links_inside_vehicles_menu a{
+    text-decoration: none;
+}
+.span_class_links{
+    color: #5c5e62 !important;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: small;
+    font-weight: 550;
+    position: relative;
+}
+
+.span_class_links::after{
+    content: '';
+    background-color: #5c5e62;
+    border: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding-bottom: 0.5px;
+    height: 1px;
+    transform-origin: bottom;
+    transition: box-shadow 0.2s ease;
+}
+.links_inside_vehicles_menu a:hover .span_class_links:after{
+    background-color: black;
+    box-shadow: 0 1px 0.5px black ;
+}
+.links_inside_vehicles_menu{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 45%;
+}
+.vehicles_menu_grid_contents{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.vehicles_menu_grid_contents h3{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
