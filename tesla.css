@@ -8,6 +8,11 @@ body{
     display: flex;
     flex-direction: column;
 }
+/* #cybertruc_svg{
+    position: absolute;
+    top: 0;
+    left: 0;
+} */
 #background1{
     overflow: hidden;
     height: 746px;
@@ -20,6 +25,36 @@ body{
     position: relative;
 }
 #background4{
+    position: relative;
+}
+#background5{
+    position: relative;
+}
+#background6{
+    position: relative;
+}
+#solar_panels_content{
+    position: absolute;
+    top: 6em;
+    left: 41em;
+    display: flex;
+    flex-direction: column;
+    
+}
+#solar_panels_content h1{
+    color: white;
+    font-family: arial, sans-serif;
+}
+#solar_panels_content h2{
+    color: white;
+}
+#background7{
+    position: relative;
+}
+#background8{
+    position: relative;
+}
+#backgrpound9{
     position: relative;
 }
 .third_background_page_elts sup{
@@ -110,6 +145,7 @@ body{
     flex-direction: column;
     align-items: center;
 }
+
 .first_background_page_elts h1{
     color: white;
     scale: 1.4;
@@ -160,12 +196,10 @@ body{
 }
 .button1_buttonsbackground{
     background-color: #3e6ae1;
-    color: white;
     border-radius: 4px;
     padding: 0.8em 7em;
     border: none;
     cursor: pointer;
-    font-weight: 550;
 }
 .button1_buttonsbackground a{
     text-decoration: none;
@@ -173,13 +207,34 @@ body{
 .button2_buttonsbackground a{
     text-decoration: none;
 }
+.button3_buttonsbackground a{
+    text-decoration: none;
+}
 .button2_buttonsbackground{
     background-color: white;
-    color: #5c5e62;
     border-radius: 4px;
     padding: 0.8em 7em;
     border: none;
     cursor: pointer;
+    
+}
+.button3_buttonsbackground{
+    background-color: white;
+    border-radius: 4px;
+    padding: 0.8em 5em;
+    border: none;
+    cursor: pointer;
+}
+.button3_buttonsbackground span{
+    color: #5c5e62;
+    font-weight: 550;
+}
+.button1_buttonsbackground span{
+    color: white;
+    font-weight: 550;
+}
+.button2_buttonsbackground span{
+    color: #5c5e62;
     font-weight: 550;
 }
 #cybertruck_background_div{
