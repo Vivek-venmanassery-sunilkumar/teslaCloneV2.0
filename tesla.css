@@ -36,17 +36,78 @@ body{
 #solar_panels_content{
     position: absolute;
     top: 6em;
-    left: 41em;
+    left: 38em;
     display: flex;
     flex-direction: column;
-    
+    align-items: center;
+
+}
+#solar_roof_contents{
+    position: absolute;
+    top: 6em;
+    left: 34.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 #solar_panels_content h1{
     color: white;
     font-family: arial, sans-serif;
+    scale: 1.5;
+    margin: 0;
+    padding: 0;
 }
-#solar_panels_content h2{
+#solar_roof_contents h1{
     color: white;
+    font-family: arial, sans-serif;
+    scale: 1.5;
+    margin: 0;
+    padding: 0;
+}
+#solar_panels_content a{
+    text-decoration: none;
+}
+#solar_roof_contents a{
+    text-decoration: none;
+}
+#solar_panels_content span{
+    color: white;
+    position: relative;
+}
+#solar_roof_contents h2{
+    color: white;
+    position: relative;
+    font-family: arial, sans-serif;
+}
+
+#solar_panels_content span::after{
+    content: '';
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    position: absolute;
+    transition: box-shadow 0.33s ease;
+}
+#solar_panels_content a:hover span::after{
+    box-shadow:0 1px 0.5px white;
+}
+#background8 h1{
+    position: absolute;
+    top: 2.5em;
+    left: 22.5em;
+    color: white;
+    scale: 1.65;
+    font-family: arial, sans-serif;
+}
+#background9 h1{
+    position: absolute;
+    top: 2.5em;
+    left: 21.5em;
+    color: white;
+    scale: 1.65;
+    font-family: arial, sans-serif;
 }
 #background7{
     position: relative;
@@ -54,7 +115,7 @@ body{
 #background8{
     position: relative;
 }
-#backgrpound9{
+#background9{
     position: relative;
 }
 .third_background_page_elts sup{
@@ -193,6 +254,23 @@ body{
     display: flex;
     flex-direction: row;
     gap: 1em;
+}
+#button_accessories{
+    position: absolute;
+    bottom: 2em;
+    left: 48.5em;
+    background-color: #3e6ae1;
+    border-radius: 4px;
+    padding: 0.8em 7em;
+    border: none;
+    cursor: pointer;
+}
+#button_accessories a{
+    text-decoration: none;
+}
+#button_accessories span{
+    color: white;
+    font-weight: 550;
 }
 .button1_buttonsbackground{
     background-color: #3e6ae1;
